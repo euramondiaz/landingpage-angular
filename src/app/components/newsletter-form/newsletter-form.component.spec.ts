@@ -11,7 +11,7 @@ describe('NewsletterFormComponent', () => {
       imports: [NewsletterFormComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(NewsletterFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
