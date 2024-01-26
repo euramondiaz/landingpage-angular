@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BtnPrimaryComponent } from '../btn-primary/btn-primary.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Console, log } from 'console';
 
 @Component({
   selector: 'newsletter-form',
@@ -18,8 +19,15 @@ export class NewsletterFormComponent {
 
   constructor() {
   this.newsletterForm = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-  });
- }
+      name: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+    });
+  }
+  onSubmit(){
+    console.log(this.newsletterForm.value);
+
+
+  }
+
+
 }
